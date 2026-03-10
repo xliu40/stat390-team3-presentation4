@@ -1,0 +1,220 @@
+Job ID: 1998636
+Start time: Sun Mar  8 06:40:43 CDT 2026
+Requirement already satisfied: torch>=1.9.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (2.9.0)
+Requirement already satisfied: torchvision>=0.10.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 3)) (0.24.0)
+Requirement already satisfied: numpy>=1.21.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 4)) (2.3.4)
+Requirement already satisfied: pandas>=1.3.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 5)) (2.3.3)
+Requirement already satisfied: scikit-learn>=1.0.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 6)) (1.7.2)
+Requirement already satisfied: Pillow>=8.3.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 7)) (12.0.0)
+Requirement already satisfied: tqdm>=4.62.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 8)) (4.67.1)
+Requirement already satisfied: matplotlib>=3.5.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 11)) (3.10.7)
+Requirement already satisfied: seaborn>=0.11.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 12)) (0.13.2)
+Requirement already satisfied: optuna>=3.0.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 15)) (4.7.0)
+Requirement already satisfied: psutil>=5.8.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 18)) (7.1.2)
+Requirement already satisfied: imbalanced-learn>=0.8.0 in /projects/e32998/env/lib/python3.12/site-packages (from -r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 21)) (0.14.0)
+Requirement already satisfied: filelock in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (3.20.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (4.15.0)
+Requirement already satisfied: setuptools in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (3.5)
+Requirement already satisfied: jinja2 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (2025.9.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (12.8.93)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (12.8.90)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (12.8.90)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (9.10.2.21)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (12.8.4.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (11.3.3.83)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (10.3.9.90)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (12.5.8.93)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.27.5 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (2.27.5)
+Requirement already satisfied: nvidia-nvshmem-cu12==3.3.20 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (3.3.20)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (12.8.90)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (12.8.93)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (1.13.1.3)
+Requirement already satisfied: triton==3.5.0 in /projects/e32998/env/lib/python3.12/site-packages (from torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (3.5.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /projects/e32998/env/lib/python3.12/site-packages (from pandas>=1.3.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 5)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /projects/e32998/env/lib/python3.12/site-packages (from pandas>=1.3.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 5)) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /projects/e32998/env/lib/python3.12/site-packages (from pandas>=1.3.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 5)) (2025.2)
+Requirement already satisfied: scipy>=1.8.0 in /projects/e32998/env/lib/python3.12/site-packages (from scikit-learn>=1.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 6)) (1.16.3)
+Requirement already satisfied: joblib>=1.2.0 in /projects/e32998/env/lib/python3.12/site-packages (from scikit-learn>=1.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 6)) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /projects/e32998/env/lib/python3.12/site-packages (from scikit-learn>=1.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 6)) (3.6.0)
+Requirement already satisfied: contourpy>=1.0.1 in /projects/e32998/env/lib/python3.12/site-packages (from matplotlib>=3.5.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 11)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /projects/e32998/env/lib/python3.12/site-packages (from matplotlib>=3.5.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 11)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /projects/e32998/env/lib/python3.12/site-packages (from matplotlib>=3.5.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 11)) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /projects/e32998/env/lib/python3.12/site-packages (from matplotlib>=3.5.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 11)) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in /projects/e32998/env/lib/python3.12/site-packages (from matplotlib>=3.5.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 11)) (25.0)
+Requirement already satisfied: pyparsing>=3 in /projects/e32998/env/lib/python3.12/site-packages (from matplotlib>=3.5.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 11)) (3.2.5)
+Requirement already satisfied: alembic>=1.5.0 in /projects/e32998/env/lib/python3.12/site-packages (from optuna>=3.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 15)) (1.18.3)
+Requirement already satisfied: colorlog in /projects/e32998/env/lib/python3.12/site-packages (from optuna>=3.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 15)) (6.10.1)
+Requirement already satisfied: sqlalchemy>=1.4.2 in /projects/e32998/env/lib/python3.12/site-packages (from optuna>=3.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 15)) (2.0.46)
+Requirement already satisfied: PyYAML in /projects/e32998/env/lib/python3.12/site-packages (from optuna>=3.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 15)) (6.0.3)
+Requirement already satisfied: Mako in /projects/e32998/env/lib/python3.12/site-packages (from alembic>=1.5.0->optuna>=3.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 15)) (1.3.10)
+Requirement already satisfied: six>=1.5 in /projects/e32998/env/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas>=1.3.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 5)) (1.17.0)
+Requirement already satisfied: greenlet>=1 in /projects/e32998/env/lib/python3.12/site-packages (from sqlalchemy>=1.4.2->optuna>=3.0.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 15)) (3.3.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /projects/e32998/env/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /projects/e32998/env/lib/python3.12/site-packages (from jinja2->torch>=1.9.0->-r /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/requirements.txt (line 2)) (3.0.3)
+Requirement already satisfied: certifi in /projects/e32998/env/lib/python3.12/site-packages (2026.2.25)
+[INFO] patches_dir:      /projects/e32998/patches_benign_split
+[INFO] embeddings_dir:   /projects/e32998/patches_varsize_pooled4096
+[INFO] kimianet_ckpt:    /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/KimiaNet.pth
+[INFO] device:           cpu
+[INFO] batch_size:       128
+[INFO] num_workers:      4
+[INFO] overwrite:        False
+[INFO] dtype:            fp16
+[INFO] min_patch_size:   32x32
+[INFO] log_every:        5
+[INFO] resizing:         disabled
+[INFO] forward pass:     one patch at a time
+[INFO] Found 83630 PNG files.
+=== KimiaNet load diagnostics (precompute) ===
+Checkpoint: /projects/e32998/STAT390_Krish/Code/Code8_varsize_patch_embeddings/KimiaNet.pth
+Filtered keys loaded: 725
+Matched features.* keys: 725/725 (100.0%)
+Missing keys: 2 (examples: ['classifier.weight', 'classifier.bias'])
+Unexpected keys: 0
+[PROGRESS] step=5 seen=640/83630 saved=624 skipped_existing=0 skipped_bad=0 skipped_too_small=16 rate=2.35 patches/sec ETA=9h 47m 36s
+[PROGRESS] step=10 seen=1280/83630 saved=1261 skipped_existing=0 skipped_bad=0 skipped_too_small=19 rate=4.17 patches/sec ETA=5h 29m 23s
+[PROGRESS] step=15 seen=1920/83630 saved=1901 skipped_existing=0 skipped_bad=0 skipped_too_small=19 rate=5.42 patches/sec ETA=4h 11m 11s
+[PROGRESS] step=20 seen=2560/83630 saved=2541 skipped_existing=0 skipped_bad=0 skipped_too_small=19 rate=6.45 patches/sec ETA=3h 29m 22s
+[PROGRESS] step=25 seen=3200/83630 saved=3181 skipped_existing=0 skipped_bad=0 skipped_too_small=19 rate=7.27 patches/sec ETA=3h 4m 18s
+[PROGRESS] step=30 seen=3840/83630 saved=3821 skipped_existing=0 skipped_bad=0 skipped_too_small=19 rate=8.09 patches/sec ETA=2h 44m 21s
+[PROGRESS] step=35 seen=4480/83630 saved=4461 skipped_existing=0 skipped_bad=0 skipped_too_small=19 rate=8.82 patches/sec ETA=2h 29m 30s
+[PROGRESS] step=40 seen=5120/83630 saved=5101 skipped_existing=0 skipped_bad=0 skipped_too_small=19 rate=9.45 patches/sec ETA=2h 18m 31s
+[PROGRESS] step=45 seen=5760/83630 saved=5718 skipped_existing=0 skipped_bad=0 skipped_too_small=42 rate=9.47 patches/sec ETA=2h 17m 1s
+[PROGRESS] step=50 seen=6400/83630 saved=6320 skipped_existing=0 skipped_bad=0 skipped_too_small=80 rate=9.64 patches/sec ETA=2h 13m 35s
+[PROGRESS] step=55 seen=7040/83630 saved=6952 skipped_existing=0 skipped_bad=0 skipped_too_small=88 rate=9.50 patches/sec ETA=2h 14m 25s
+[PROGRESS] step=60 seen=7680/83630 saved=7574 skipped_existing=0 skipped_bad=0 skipped_too_small=106 rate=7.52 patches/sec ETA=2h 48m 17s
+[PROGRESS] step=65 seen=8320/83630 saved=8214 skipped_existing=0 skipped_bad=0 skipped_too_small=106 rate=7.08 patches/sec ETA=2h 57m 13s
+[PROGRESS] step=70 seen=8960/83630 saved=8854 skipped_existing=0 skipped_bad=0 skipped_too_small=106 rate=7.18 patches/sec ETA=2h 53m 25s
+[PROGRESS] step=75 seen=9600/83630 saved=9494 skipped_existing=0 skipped_bad=0 skipped_too_small=106 rate=7.36 patches/sec ETA=2h 47m 35s
+[PROGRESS] step=80 seen=10240/83630 saved=10130 skipped_existing=0 skipped_bad=0 skipped_too_small=110 rate=7.61 patches/sec ETA=2h 40m 45s
+[PROGRESS] step=85 seen=10880/83630 saved=10764 skipped_existing=0 skipped_bad=0 skipped_too_small=116 rate=7.88 patches/sec ETA=2h 33m 49s
+[PROGRESS] step=90 seen=11520/83630 saved=11398 skipped_existing=0 skipped_bad=0 skipped_too_small=122 rate=8.03 patches/sec ETA=2h 29m 36s
+[PROGRESS] step=95 seen=12160/83630 saved=12038 skipped_existing=0 skipped_bad=0 skipped_too_small=122 rate=8.11 patches/sec ETA=2h 26m 51s
+[PROGRESS] step=100 seen=12800/83630 saved=12675 skipped_existing=0 skipped_bad=0 skipped_too_small=125 rate=8.13 patches/sec ETA=2h 25m 11s
+[PROGRESS] step=105 seen=13440/83630 saved=13283 skipped_existing=0 skipped_bad=0 skipped_too_small=157 rate=8.06 patches/sec ETA=2h 25m 6s
+[PROGRESS] step=110 seen=14080/83630 saved=13885 skipped_existing=0 skipped_bad=0 skipped_too_small=195 rate=8.06 patches/sec ETA=2h 23m 46s
+[PROGRESS] step=115 seen=14720/83630 saved=14508 skipped_existing=0 skipped_bad=0 skipped_too_small=212 rate=7.30 patches/sec ETA=2h 37m 16s
+[PROGRESS] step=120 seen=15360/83630 saved=15148 skipped_existing=0 skipped_bad=0 skipped_too_small=212 rate=7.18 patches/sec ETA=2h 38m 32s
+[PROGRESS] step=125 seen=16000/83630 saved=15761 skipped_existing=0 skipped_bad=0 skipped_too_small=239 rate=7.34 patches/sec ETA=2h 33m 38s
+[PROGRESS] step=130 seen=16640/83630 saved=16398 skipped_existing=0 skipped_bad=0 skipped_too_small=242 rate=7.48 patches/sec ETA=2h 29m 14s
+[PROGRESS] step=135 seen=17280/83630 saved=17038 skipped_existing=0 skipped_bad=0 skipped_too_small=242 rate=7.64 patches/sec ETA=2h 24m 39s
+[PROGRESS] step=140 seen=17920/83630 saved=17674 skipped_existing=0 skipped_bad=0 skipped_too_small=246 rate=7.81 patches/sec ETA=2h 20m 11s
+[PROGRESS] step=145 seen=18560/83630 saved=18314 skipped_existing=0 skipped_bad=0 skipped_too_small=246 rate=7.96 patches/sec ETA=2h 16m 19s
+[PROGRESS] step=150 seen=19200/83630 saved=18954 skipped_existing=0 skipped_bad=0 skipped_too_small=246 rate=8.12 patches/sec ETA=2h 12m 18s
+[PROGRESS] step=155 seen=19840/83630 saved=19594 skipped_existing=0 skipped_bad=0 skipped_too_small=246 rate=8.22 patches/sec ETA=2h 9m 16s
+[PROGRESS] step=160 seen=20480/83630 saved=20234 skipped_existing=0 skipped_bad=0 skipped_too_small=246 rate=8.35 patches/sec ETA=2h 6m 0s
+[PROGRESS] step=165 seen=21120/83630 saved=20874 skipped_existing=0 skipped_bad=0 skipped_too_small=246 rate=8.47 patches/sec ETA=2h 2m 58s
+[PROGRESS] step=170 seen=21760/83630 saved=21513 skipped_existing=0 skipped_bad=0 skipped_too_small=247 rate=8.43 patches/sec ETA=2h 2m 17s
+[PROGRESS] step=175 seen=22400/83630 saved=22150 skipped_existing=0 skipped_bad=0 skipped_too_small=250 rate=8.43 patches/sec ETA=2h 1m 0s
+[PROGRESS] step=180 seen=23040/83630 saved=22786 skipped_existing=0 skipped_bad=0 skipped_too_small=254 rate=8.51 patches/sec ETA=1h 58m 42s
+[PROGRESS] step=185 seen=23680/83630 saved=23423 skipped_existing=0 skipped_bad=0 skipped_too_small=257 rate=8.35 patches/sec ETA=1h 59m 37s
+[PROGRESS] step=190 seen=24320/83630 saved=24063 skipped_existing=0 skipped_bad=0 skipped_too_small=257 rate=8.28 patches/sec ETA=1h 59m 22s
+[PROGRESS] step=195 seen=24960/83630 saved=24701 skipped_existing=0 skipped_bad=0 skipped_too_small=259 rate=8.30 patches/sec ETA=1h 57m 46s
+[PROGRESS] step=200 seen=25600/83630 saved=25341 skipped_existing=0 skipped_bad=0 skipped_too_small=259 rate=8.41 patches/sec ETA=1h 55m 1s
+[PROGRESS] step=205 seen=26240/83630 saved=25981 skipped_existing=0 skipped_bad=0 skipped_too_small=259 rate=8.51 patches/sec ETA=1h 52m 25s
+[PROGRESS] step=210 seen=26880/83630 saved=26530 skipped_existing=0 skipped_bad=0 skipped_too_small=350 rate=8.62 patches/sec ETA=1h 49m 41s
+[PROGRESS] step=215 seen=27520/83630 saved=27166 skipped_existing=0 skipped_bad=0 skipped_too_small=354 rate=8.71 patches/sec ETA=1h 47m 20s
+[PROGRESS] step=220 seen=28160/83630 saved=27805 skipped_existing=0 skipped_bad=0 skipped_too_small=355 rate=8.85 patches/sec ETA=1h 44m 28s
+[PROGRESS] step=225 seen=28800/83630 saved=28445 skipped_existing=0 skipped_bad=0 skipped_too_small=355 rate=8.97 patches/sec ETA=1h 41m 52s
+[PROGRESS] step=230 seen=29440/83630 saved=29084 skipped_existing=0 skipped_bad=0 skipped_too_small=356 rate=9.08 patches/sec ETA=1h 39m 24s
+[PROGRESS] step=235 seen=30080/83630 saved=29721 skipped_existing=0 skipped_bad=0 skipped_too_small=359 rate=9.16 patches/sec ETA=1h 37m 26s
+[PROGRESS] step=240 seen=30720/83630 saved=30361 skipped_existing=0 skipped_bad=0 skipped_too_small=359 rate=9.21 patches/sec ETA=1h 35m 47s
+[PROGRESS] step=245 seen=31360/83630 saved=30995 skipped_existing=0 skipped_bad=0 skipped_too_small=365 rate=9.25 patches/sec ETA=1h 34m 10s
+[PROGRESS] step=250 seen=32000/83630 saved=31616 skipped_existing=0 skipped_bad=0 skipped_too_small=384 rate=9.28 patches/sec ETA=1h 32m 42s
+[PROGRESS] step=255 seen=32640/83630 saved=32216 skipped_existing=0 skipped_bad=0 skipped_too_small=424 rate=9.37 patches/sec ETA=1h 30m 39s
+[PROGRESS] step=260 seen=33280/83630 saved=32855 skipped_existing=0 skipped_bad=0 skipped_too_small=425 rate=9.47 patches/sec ETA=1h 28m 34s
+[PROGRESS] step=265 seen=33920/83630 saved=33494 skipped_existing=0 skipped_bad=0 skipped_too_small=426 rate=9.56 patches/sec ETA=1h 26m 39s
+[PROGRESS] step=270 seen=34560/83630 saved=34131 skipped_existing=0 skipped_bad=0 skipped_too_small=429 rate=9.65 patches/sec ETA=1h 24m 42s
+[PROGRESS] step=275 seen=35200/83630 saved=34771 skipped_existing=0 skipped_bad=0 skipped_too_small=429 rate=9.69 patches/sec ETA=1h 23m 18s
+[PROGRESS] step=280 seen=35840/83630 saved=35411 skipped_existing=0 skipped_bad=0 skipped_too_small=429 rate=9.76 patches/sec ETA=1h 21m 36s
+[PROGRESS] step=285 seen=36480/83630 saved=36051 skipped_existing=0 skipped_bad=0 skipped_too_small=429 rate=9.83 patches/sec ETA=1h 19m 56s
+[PROGRESS] step=290 seen=37120/83630 saved=36691 skipped_existing=0 skipped_bad=0 skipped_too_small=429 rate=9.89 patches/sec ETA=1h 18m 22s
+[PROGRESS] step=295 seen=37760/83630 saved=37330 skipped_existing=0 skipped_bad=0 skipped_too_small=430 rate=9.92 patches/sec ETA=1h 17m 3s
+[PROGRESS] step=300 seen=38400/83630 saved=37938 skipped_existing=0 skipped_bad=0 skipped_too_small=462 rate=9.95 patches/sec ETA=1h 15m 45s
+[PROGRESS] step=305 seen=39040/83630 saved=38557 skipped_existing=0 skipped_bad=0 skipped_too_small=483 rate=10.04 patches/sec ETA=1h 14m 3s
+[PROGRESS] step=310 seen=39680/83630 saved=39132 skipped_existing=0 skipped_bad=0 skipped_too_small=548 rate=10.13 patches/sec ETA=1h 12m 18s
+[PROGRESS] step=315 seen=40320/83630 saved=39721 skipped_existing=0 skipped_bad=0 skipped_too_small=599 rate=10.21 patches/sec ETA=1h 10m 42s
+[PROGRESS] step=320 seen=40960/83630 saved=40359 skipped_existing=0 skipped_bad=0 skipped_too_small=601 rate=10.29 patches/sec ETA=1h 9m 7s
+[PROGRESS] step=325 seen=41600/83630 saved=40999 skipped_existing=0 skipped_bad=0 skipped_too_small=601 rate=10.36 patches/sec ETA=1h 7m 38s
+[PROGRESS] step=330 seen=42240/83630 saved=41638 skipped_existing=0 skipped_bad=0 skipped_too_small=602 rate=10.38 patches/sec ETA=1h 6m 26s
+[PROGRESS] step=335 seen=42880/83630 saved=42278 skipped_existing=0 skipped_bad=0 skipped_too_small=602 rate=10.38 patches/sec ETA=1h 5m 25s
+[PROGRESS] step=340 seen=43520/83630 saved=42914 skipped_existing=0 skipped_bad=0 skipped_too_small=606 rate=10.41 patches/sec ETA=1h 4m 11s
+[PROGRESS] step=345 seen=44160/83630 saved=43551 skipped_existing=0 skipped_bad=0 skipped_too_small=609 rate=10.46 patches/sec ETA=1h 2m 52s
+[PROGRESS] step=350 seen=44800/83630 saved=44191 skipped_existing=0 skipped_bad=0 skipped_too_small=609 rate=10.53 patches/sec ETA=1h 1m 28s
+[PROGRESS] step=355 seen=45440/83630 saved=44831 skipped_existing=0 skipped_bad=0 skipped_too_small=609 rate=10.61 patches/sec ETA=59m 59s
+[PROGRESS] step=360 seen=46080/83630 saved=45471 skipped_existing=0 skipped_bad=0 skipped_too_small=609 rate=10.67 patches/sec ETA=58m 38s
+[PROGRESS] step=365 seen=46720/83630 saved=46109 skipped_existing=0 skipped_bad=0 skipped_too_small=611 rate=10.76 patches/sec ETA=57m 10s
+[PROGRESS] step=370 seen=47360/83630 saved=46747 skipped_existing=0 skipped_bad=0 skipped_too_small=613 rate=10.84 patches/sec ETA=55m 47s
+[PROGRESS] step=375 seen=48000/83630 saved=47387 skipped_existing=0 skipped_bad=0 skipped_too_small=613 rate=10.91 patches/sec ETA=54m 26s
+[PROGRESS] step=380 seen=48640/83630 saved=48025 skipped_existing=0 skipped_bad=0 skipped_too_small=615 rate=10.96 patches/sec ETA=53m 12s
+[PROGRESS] step=385 seen=49280/83630 saved=48665 skipped_existing=0 skipped_bad=0 skipped_too_small=615 rate=11.02 patches/sec ETA=51m 58s
+[PROGRESS] step=390 seen=49920/83630 saved=49305 skipped_existing=0 skipped_bad=0 skipped_too_small=615 rate=11.06 patches/sec ETA=50m 46s
+[PROGRESS] step=395 seen=50560/83630 saved=49943 skipped_existing=0 skipped_bad=0 skipped_too_small=617 rate=11.09 patches/sec ETA=49m 41s
+[PROGRESS] step=400 seen=51200/83630 saved=50583 skipped_existing=0 skipped_bad=0 skipped_too_small=617 rate=10.99 patches/sec ETA=49m 9s
+[PROGRESS] step=405 seen=51840/83630 saved=51221 skipped_existing=0 skipped_bad=0 skipped_too_small=619 rate=10.67 patches/sec ETA=49m 39s
+[PROGRESS] step=410 seen=52480/83630 saved=51853 skipped_existing=0 skipped_bad=0 skipped_too_small=627 rate=10.18 patches/sec ETA=51m 0s
+[PROGRESS] step=415 seen=53120/83630 saved=52312 skipped_existing=0 skipped_bad=0 skipped_too_small=808 rate=10.26 patches/sec ETA=49m 34s
+[PROGRESS] step=420 seen=53760/83630 saved=52731 skipped_existing=0 skipped_bad=0 skipped_too_small=1029 rate=10.33 patches/sec ETA=48m 11s
+[PROGRESS] step=425 seen=54400/83630 saved=53321 skipped_existing=0 skipped_bad=0 skipped_too_small=1079 rate=10.39 patches/sec ETA=46m 54s
+[PROGRESS] step=430 seen=55040/83630 saved=53961 skipped_existing=0 skipped_bad=0 skipped_too_small=1079 rate=10.42 patches/sec ETA=45m 42s
+[PROGRESS] step=435 seen=55680/83630 saved=54600 skipped_existing=0 skipped_bad=0 skipped_too_small=1080 rate=10.43 patches/sec ETA=44m 40s
+[PROGRESS] step=440 seen=56320/83630 saved=55240 skipped_existing=0 skipped_bad=0 skipped_too_small=1080 rate=10.45 patches/sec ETA=43m 33s
+[PROGRESS] step=445 seen=56960/83630 saved=55863 skipped_existing=0 skipped_bad=0 skipped_too_small=1097 rate=10.49 patches/sec ETA=42m 23s
+[PROGRESS] step=450 seen=57600/83630 saved=56503 skipped_existing=0 skipped_bad=0 skipped_too_small=1097 rate=10.54 patches/sec ETA=41m 10s
+[PROGRESS] step=455 seen=58240/83630 saved=57090 skipped_existing=0 skipped_bad=0 skipped_too_small=1150 rate=10.59 patches/sec ETA=39m 56s
+[PROGRESS] step=460 seen=58880/83630 saved=57577 skipped_existing=0 skipped_bad=0 skipped_too_small=1303 rate=10.64 patches/sec ETA=38m 45s
+[PROGRESS] step=465 seen=59520/83630 saved=58088 skipped_existing=0 skipped_bad=0 skipped_too_small=1432 rate=10.71 patches/sec ETA=37m 31s
+[PROGRESS] step=470 seen=60160/83630 saved=58694 skipped_existing=0 skipped_bad=0 skipped_too_small=1466 rate=10.74 patches/sec ETA=36m 26s
+[PROGRESS] step=475 seen=60800/83630 saved=59331 skipped_existing=0 skipped_bad=0 skipped_too_small=1469 rate=10.66 patches/sec ETA=35m 42s
+[PROGRESS] step=480 seen=61440/83630 saved=59967 skipped_existing=0 skipped_bad=0 skipped_too_small=1473 rate=10.72 patches/sec ETA=34m 30s
+[PROGRESS] step=485 seen=62080/83630 saved=60505 skipped_existing=0 skipped_bad=0 skipped_too_small=1575 rate=10.79 patches/sec ETA=33m 17s
+[PROGRESS] step=490 seen=62720/83630 saved=61030 skipped_existing=0 skipped_bad=0 skipped_too_small=1690 rate=10.85 patches/sec ETA=32m 7s
+[PROGRESS] step=495 seen=63360/83630 saved=61562 skipped_existing=0 skipped_bad=0 skipped_too_small=1798 rate=10.90 patches/sec ETA=30m 58s
+[PROGRESS] step=500 seen=64000/83630 saved=62176 skipped_existing=0 skipped_bad=0 skipped_too_small=1824 rate=10.94 patches/sec ETA=29m 54s
+[PROGRESS] step=505 seen=64640/83630 saved=62814 skipped_existing=0 skipped_bad=0 skipped_too_small=1826 rate=10.97 patches/sec ETA=28m 51s
+[PROGRESS] step=510 seen=65280/83630 saved=63449 skipped_existing=0 skipped_bad=0 skipped_too_small=1831 rate=11.04 patches/sec ETA=27m 42s
+[PROGRESS] step=515 seen=65920/83630 saved=64083 skipped_existing=0 skipped_bad=0 skipped_too_small=1837 rate=11.09 patches/sec ETA=26m 36s
+[PROGRESS] step=520 seen=66560/83630 saved=64707 skipped_existing=0 skipped_bad=0 skipped_too_small=1853 rate=11.13 patches/sec ETA=25m 33s
+[PROGRESS] step=525 seen=67200/83630 saved=65344 skipped_existing=0 skipped_bad=0 skipped_too_small=1856 rate=11.18 patches/sec ETA=24m 29s
+[PROGRESS] step=530 seen=67840/83630 saved=65984 skipped_existing=0 skipped_bad=0 skipped_too_small=1856 rate=11.20 patches/sec ETA=23m 29s
+[PROGRESS] step=535 seen=68480/83630 saved=66608 skipped_existing=0 skipped_bad=0 skipped_too_small=1872 rate=11.25 patches/sec ETA=22m 27s
+[PROGRESS] step=540 seen=69120/83630 saved=67241 skipped_existing=0 skipped_bad=0 skipped_too_small=1879 rate=11.28 patches/sec ETA=21m 26s
+[PROGRESS] step=545 seen=69760/83630 saved=67873 skipped_existing=0 skipped_bad=0 skipped_too_small=1887 rate=11.31 patches/sec ETA=20m 26s
+[PROGRESS] step=550 seen=70400/83630 saved=68489 skipped_existing=0 skipped_bad=0 skipped_too_small=1911 rate=11.34 patches/sec ETA=19m 26s
+[PROGRESS] step=555 seen=71040/83630 saved=69076 skipped_existing=0 skipped_bad=0 skipped_too_small=1964 rate=11.38 patches/sec ETA=18m 25s
+[PROGRESS] step=560 seen=71680/83630 saved=69701 skipped_existing=0 skipped_bad=0 skipped_too_small=1979 rate=11.42 patches/sec ETA=17m 26s
+[PROGRESS] step=565 seen=72320/83630 saved=70327 skipped_existing=0 skipped_bad=0 skipped_too_small=1993 rate=11.44 patches/sec ETA=16m 28s
+[PROGRESS] step=570 seen=72960/83630 saved=70967 skipped_existing=0 skipped_bad=0 skipped_too_small=1993 rate=11.47 patches/sec ETA=15m 30s
+[PROGRESS] step=575 seen=73600/83630 saved=71607 skipped_existing=0 skipped_bad=0 skipped_too_small=1993 rate=11.49 patches/sec ETA=14m 33s
+[PROGRESS] step=580 seen=74240/83630 saved=72247 skipped_existing=0 skipped_bad=0 skipped_too_small=1993 rate=11.52 patches/sec ETA=13m 34s
+[PROGRESS] step=585 seen=74880/83630 saved=72887 skipped_existing=0 skipped_bad=0 skipped_too_small=1993 rate=11.50 patches/sec ETA=12m 40s
+[PROGRESS] step=590 seen=75520/83630 saved=73527 skipped_existing=0 skipped_bad=0 skipped_too_small=1993 rate=11.42 patches/sec ETA=11m 49s
+[PROGRESS] step=595 seen=76160/83630 saved=74167 skipped_existing=0 skipped_bad=0 skipped_too_small=1993 rate=11.33 patches/sec ETA=10m 59s
+[PROGRESS] step=600 seen=76800/83630 saved=74805 skipped_existing=0 skipped_bad=0 skipped_too_small=1995 rate=11.01 patches/sec ETA=10m 20s
+[PROGRESS] step=605 seen=77440/83630 saved=75444 skipped_existing=0 skipped_bad=0 skipped_too_small=1996 rate=11.06 patches/sec ETA=9m 19s
+[PROGRESS] step=610 seen=78080/83630 saved=76083 skipped_existing=0 skipped_bad=0 skipped_too_small=1997 rate=11.09 patches/sec ETA=8m 20s
+[PROGRESS] step=615 seen=78720/83630 saved=76723 skipped_existing=0 skipped_bad=0 skipped_too_small=1997 rate=11.11 patches/sec ETA=7m 21s
+[PROGRESS] step=620 seen=79360/83630 saved=77363 skipped_existing=0 skipped_bad=0 skipped_too_small=1997 rate=11.15 patches/sec ETA=6m 23s
+[PROGRESS] step=625 seen=80000/83630 saved=78003 skipped_existing=0 skipped_bad=0 skipped_too_small=1997 rate=11.18 patches/sec ETA=5m 24s
+[PROGRESS] step=630 seen=80640/83630 saved=78642 skipped_existing=0 skipped_bad=0 skipped_too_small=1998 rate=11.20 patches/sec ETA=4m 26s
+[PROGRESS] step=635 seen=81280/83630 saved=79280 skipped_existing=0 skipped_bad=0 skipped_too_small=2000 rate=11.23 patches/sec ETA=3m 29s
+[PROGRESS] step=640 seen=81920/83630 saved=79919 skipped_existing=0 skipped_bad=0 skipped_too_small=2001 rate=11.26 patches/sec ETA=2m 31s
+[PROGRESS] step=645 seen=82560/83630 saved=80557 skipped_existing=0 skipped_bad=0 skipped_too_small=2003 rate=11.28 patches/sec ETA=1m 34s
+[PROGRESS] step=650 seen=83200/83630 saved=81197 skipped_existing=0 skipped_bad=0 skipped_too_small=2003 rate=11.31 patches/sec ETA=38s
+[PROGRESS] step=654 seen=83630/83630 saved=81627 skipped_existing=0 skipped_bad=0 skipped_too_small=2003 rate=11.32 patches/sec ETA=0s
+[DONE]
+[SUMMARY] total_png=83630
+[SUMMARY] saved=81627
+[SUMMARY] skipped_existing=0
+[SUMMARY] skipped_bad=0
+[SUMMARY] skipped_too_small=2003
+[SUMMARY] embeddings_dir=/projects/e32998/patches_varsize_pooled4096
+[SUMMARY] total_time=2h 3m 7s
+Note: saved tensors are length 4096 (DenseNet121 + AdaptiveAvgPool2d((2,2))).
+Note: this version is typically slower than the resized batched version because
+      variable-size patches are forwarded one at a time instead of as a stacked batch.
