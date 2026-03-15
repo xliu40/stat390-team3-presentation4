@@ -38,7 +38,7 @@ python3 optuna_tuning.py \
     --pruning_warmup_epochs 6 \
     --no_prune_first_trials 6 \
     --batch_size 1 \
-    --num_workers 2 \
+    --num_workers 0 \
     --per_slice_cap 500 \
     --max_slices_per_stain 5 \
     --seed 42

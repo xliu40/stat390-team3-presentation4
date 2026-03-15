@@ -1,0 +1,43 @@
+{
+  "study_name": "optuna_presentation4_mar11_try3",
+  "datetime": "2026-03-14 10:44:38",
+  "n_trials_total": 64,
+  "n_trials_complete": 35,
+  "n_trials_pruned": 29,
+  "best_trial_number": 5,
+  "best_value": 0.22151336168622254,
+  "best_params": {
+    "learning_rate": 5.22465277102519e-05,
+    "weight_decay": 0.00046962272683261693,
+    "patch_proj_dropout": 0.5110095739364624,
+    "classifier_dropout": 0.19820380210876465,
+    "class_weight_benign": 2.1365861892700195,
+    "entropy_lambda": 0.0009976356838291762
+  },
+  "best_user_attrs": {
+    "best_avg_val_loss": 0.22151336168622254,
+    "best_epoch": 9,
+    "best_epoch_fold_val_accs": [
+      0.8333333333333334,
+      0.8888888888888888,
+      0.8947368421052632,
+      0.8947368421052632,
+      0.8421052631578947
+    ],
+    "best_epoch_fold_val_losses": [
+      0.19357437339340322,
+      0.2148304741151953,
+      0.194317235837963,
+      0.29304722553613255,
+      0.21179749954841864
+    ],
+    "early_stopped_epoch": 18,
+    "per_fold_best_val_loss": [
+      0.18264143755954543,
+      0.12757580646327404,
+      0.19170573053513876,
+      0.29304722553613255,
+      0.19415221307861574
+    ]
+  }
+}

@@ -29,13 +29,14 @@ MODEL_CONFIG = {
 TRAINING_CONFIG = {
     'epochs': 30,  # Increased since we have early stopping
     'batch_size': 1,  # MIL typically uses batch_size=1
-    'learning_rate': 2.08e-4,  # Updated from OPTUNA study
-    'weight_decay': 3.05e-4,  # Updated from OPTUNA study
+    'learning_rate': 5.225e-05,  # Updated from OPTUNA study
+    'weight_decay': 4.696e-04,  # Updated from OPTUNA study
     'num_workers': 2,
     'pin_memory': True,
     'random_state': 42,
-    'class_weights': [2.5285, 1.0],  # Increased benign weight from 2.0 to 2.5285 (from OPTUNA study)
-    'dropout': 0.2599,  # Add dropout for regularization
+    'class_weights': [2.136586, 1.0],
+    'patch_proj_dropout': 0.511010,
+    'classifier_dropout': 0.198204,
     # Learning rate scheduler
     'use_scheduler': True,
     'scheduler_type': 'reduce_on_plateau',  # 'reduce_on_plateau' or 'cosine'
@@ -49,7 +50,7 @@ TRAINING_CONFIG = {
     'early_stopping_min_epochs': 10,  # Minimum epochs before early stopping can trigger
 
     'use_patch_entropy_regularization': True,
-    'patch_entropy_lambda': 0.001,
+    'patch_entropy_lambda': 9.976e-04,
     'patch_entropy_mode': "max",   # "max" or "min"
     'patch_entropy_eps': 1e-8,
     'normalize_patch_entropy': True

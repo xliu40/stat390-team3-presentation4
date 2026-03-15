@@ -1,0 +1,6 @@
+[I 2026-03-14 06:26:44,123] Using an existing study with name 'optuna_presentation4_mar12_parallel1' instead of creating a new one.
+  0%|          | 0/64 [00:00<?, ?it/s]/projects/e32998/env/lib/python3.12/site-packages/optuna/trial/_trial.py:658: UserWarning: Fixed parameter 'patch_proj_dropout' with value 0.5110095739364624 is out of range for distribution FloatDistribution(high=0.5, log=False, low=0.2, step=None).
+  optuna_warn(
+/projects/e32998/env/lib/python3.12/site-packages/optuna/trial/_trial.py:658: UserWarning: Fixed parameter 'classifier_dropout' with value 0.19820380210876465 is out of range for distribution FloatDistribution(high=0.5, log=False, low=0.2, step=None).
+  optuna_warn(
+                                        0%|          | 0/64 [00:51<?, ?it/s]                                        0%|          | 0/64 [00:51<?, ?it/s]                                        0%|          | 0/64 [00:52<?, ?it/s]                                        0%|          | 0/64 [00:52<?, ?it/s]                                        0%|          | 0/64 [00:52<?, ?it/s]                                        0%|          | 0/64 [00:52<?, ?it/s]slurmstepd: error: *** JOB 2783311 ON qnode0551 CANCELLED AT 2026-03-14T13:11:08 ***

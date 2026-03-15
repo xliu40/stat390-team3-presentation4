@@ -58,7 +58,8 @@ class HierarchicalAttnMIL(nn.Module):
         self,
         num_classes: int = 2,
         embed_dim: int = 512,
-        dropout: float = 0.3,
+        patch_proj_dropout: float = 0.3,
+        classifier_dropout: float = 0.3,
         pooled_dim: int = 4096,
     ):
         super().__init__()
@@ -70,7 +71,7 @@ class HierarchicalAttnMIL(nn.Module):
         self.patch_projector = nn.Sequential(
             nn.Linear(self.pooled_dim, embed_dim),
             nn.ReLU(),
-            nn.Dropout(dropout),
+            nn.Dropout(patch_proj_dropout),
         )
 
         # Attention modules (NO dropout)
@@ -88,7 +89,7 @@ class HierarchicalAttnMIL(nn.Module):
 
         # Classifier
         self.classifier = nn.Sequential(
-            nn.Dropout(dropout),
+            nn.Dropout(classifier_dropout),
             nn.Linear(embed_dim, num_classes),
         )
 
@@ -241,7 +242,8 @@ class HierarchicalAttnMIL(nn.Module):
 def create_model(
     num_classes: int = None,
     embed_dim: int = None,
-    dropout: float = None,
+    patch_proj_dropout: float = None,
+    classifier_dropout: float = None,
     pooled_dim: int = 4096,
 ) -> HierarchicalAttnMIL:
 
@@ -251,13 +253,15 @@ def create_model(
     if embed_dim is None:
         embed_dim = MODEL_CONFIG["embed_dim"]
 
-    if dropout is None:
+    if patch_proj_dropout is None or classifier_dropout is None:
         from config import TRAINING_CONFIG
-        dropout = TRAINING_CONFIG.get("dropout", 0.3)
+        patch_proj_dropout = TRAINING_CONFIG.get("patch_proj_dropout", 0.3)
+        classifier_dropout = TRAINING_CONFIG.get("classifier_dropout", 0.3)
 
     return HierarchicalAttnMIL(
         num_classes=num_classes,
         embed_dim=embed_dim,
-        dropout=dropout,
+        patch_proj_dropout=patch_proj_dropout,
+        classifier_dropout=classifier_dropout,
         pooled_dim=pooled_dim,
     )

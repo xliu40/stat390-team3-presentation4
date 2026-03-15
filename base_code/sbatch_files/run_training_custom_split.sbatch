@@ -5,11 +5,11 @@
 #SBATCH --nodes=1                         # 1 node
 #SBATCH --ntasks=16                        # n nores
 #SBATCH --mem=128G                          # n GB RAM
-#SBATCH --job-name=MIL_train              # Job name (no spaces)
-#SBATCH --output=test_split5.out
-#SBATCH --error=test_split5.err
+#SBATCH --job-name=mar14_test_split4             # Job name (no spaces)
+#SBATCH --output=mar14_test_split4.out
+#SBATCH --error=mar14_test_split4.err
 #SBATCH --mail-type=ALL                   # Send email on begin, end, and fail
-#SBATCH --mail-user=krish@northwestern.edu  # Your NU email
+#SBATCH --mail-user=xiaolinliu2026@u.northwestern.edu  # Your NU email
 
 module purge
 module load python-anaconda3/2019.10
@@ -21,11 +21,11 @@ echo "Job ID: $SLURM_JOB_ID"
 echo "Start time: $(date)"
 
 # Run training
-python3 -m pip install -r /projects/e32998/STAT390_Krish/Code/Code9_no_leakage/requirements.txt
+python3 -m pip install -r /projects/e32998/STAT390_Winter2026/Presentation4/STAT390_Winter2026_Team3/base_code/requirements.txt
 python3 -m pip install --upgrade certifi
 export SSL_CERT_FILE="$(python -m certifi)"
 
-cd /projects/e32998/STAT390_Krish/Code/Code9_no_leakage/
+cd /projects/e32998/STAT390_Winter2026/Presentation4/STAT390_Winter2026_Team3/base_code/
 
 # without loading checkpoints, trying 5 diff train / test splits
 
@@ -34,4 +34,4 @@ python3 main.py \
     --attention_top_n 8 \
     --per_slice_cap 500 \
     --max_slices_per_stain 5 \
-    --load_splits /projects/e32998/STAT390_Krish/Code/Code9_no_leakage/no_train_val_leakage_splits/data_splits_new_05.npz \
+    --load_splits /projects/e32998/STAT390_Winter2026/Presentation4/STAT390_Winter2026_Team3/base_code/no_train_val_leakage_splits/data_splits_new_04.npz \

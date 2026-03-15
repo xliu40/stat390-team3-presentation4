@@ -356,6 +356,27 @@ class FoldTrainer:
     def step_scheduler(self, val_loss: float) -> None:
         self.scheduler.step(val_loss)
 
+# -----------------------------------------------------------------------------
+# Early stopping
+# -----------------------------------------------------------------------------
+class EarlyStopper:
+    def __init__(self, patience: int, min_delta: float, min_epochs: int):
+        self.patience = patience
+        self.min_delta = min_delta
+        self.min_epochs = min_epochs
+        self.best_loss = float("inf")
+        self.epochs_without_improvement = 0
+
+    def step(self, epoch: int, mean_val_loss: float) -> bool:
+        """Returns True if training should stop."""
+        if epoch < self.min_epochs:
+            return False
+        if mean_val_loss < self.best_loss - self.min_delta:
+            self.best_loss = mean_val_loss
+            self.epochs_without_improvement = 0
+        else:
+            self.epochs_without_improvement += 1
+        return self.epochs_without_improvement >= self.patience
 
 # -----------------------------------------------------------------------------
 # Data preparation for all 5 split files
@@ -493,10 +514,10 @@ def generate_sobol_startup_trials(n_points: int, seed: int) -> List[Dict[str, fl
 # -----------------------------------------------------------------------------
 def suggest_hparams(trial: optuna.Trial) -> Dict[str, float]:
     return {
-        "learning_rate": trial.suggest_float("learning_rate", 3e-5, 1e-3, log=True),
-        "weight_decay": trial.suggest_float("weight_decay", 1e-6, 2e-3, log=True),
-        "patch_proj_dropout": trial.suggest_float("patch_proj_dropout", 0.15, 0.55),
-        "classifier_dropout": trial.suggest_float("classifier_dropout", 0.15, 0.55),
+        "learning_rate": trial.suggest_float("learning_rate", 1e-5, 1e-2, log=True),
+        "weight_decay": trial.suggest_float("weight_decay", 1e-6, 1e-3, log=True),
+        "patch_proj_dropout": trial.suggest_float("patch_proj_dropout", 0.2, 0.5),
+        "classifier_dropout": trial.suggest_float("classifier_dropout", 0.2, 0.5),
         "class_weight_benign": trial.suggest_float("class_weight_benign", 2.0, 4.0),
         "entropy_lambda": trial.suggest_float("entropy_lambda", 1e-5, 1e-2, log=True),
     }
@@ -544,6 +565,14 @@ def objective_factory(
         best_epoch_fold_val_losses: Optional[List[float]] = None
         best_epoch_fold_val_accs: Optional[List[float]] = None
 
+        # pull early stopping config
+        use_early_stopping = bool(TRAINING_CONFIG.get("early_stopping", False))
+        early_stopper = EarlyStopper(
+            patience=TRAINING_CONFIG.get("early_stopping_patience", 8),
+            min_delta=TRAINING_CONFIG.get("early_stopping_min_delta", 0.001),
+            min_epochs=TRAINING_CONFIG.get("early_stopping_min_epochs", 10),
+        ) if use_early_stopping else None
+
         try:
             for epoch in range(max_epochs):
                 epoch_train_losses = []
@@ -584,6 +613,13 @@ def objective_factory(
                 if trial.should_prune():
                     trial.set_user_attr("pruned_epoch", epoch + 1)
                     raise optuna.TrialPruned()
+                
+                # early stopping check (after pruning check)
+                if early_stopper is not None and early_stopper.step(epoch + 1, mean_val_loss):
+                    print(f"  --> Early stopping triggered at epoch {epoch + 1} "
+                          f"(no improvement for {early_stopper.patience} epochs)")
+                    trial.set_user_attr("early_stopped_epoch", epoch + 1)
+                    break
 
             # store summary attrs
             trial.set_user_attr("best_epoch", best_epoch)
